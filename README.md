@@ -13,24 +13,33 @@ This is a website built using pure **HTML** and **CSS**.
 1. Clone the repository:
 
    ```bash
-   git clone <[repo-url](https://github.com/emilystewart26/Website)>
+   git clone https://github.com/emilystewart26/Website
    
-2. Open the project folder in your editor.
+2. Open the project folder in your editor
 
-3. Use Live Server or open the index.html file directly in your browser.
+3. Use Live Server or open the index.html file directly in your browser
 
 ## 🤝 Contributing Rules
 
 We welcome contributions! Please follow these steps to contribute:
 
-1. Fork the repository.
+1. Fork the repository
 
-2. Create a new branch: git checkout -b feature/your-feature-name.
+2. Create a new branch:
 
-3. Make your changes.
+   ```bash
+   git checkout -b feature/amazing-new-feature
 
-4. Commit your changes: git commit -m "Add your message here".
+5. Make your changes
 
-5. Push to the branch: git push origin feature/your-feature-name.
+6. Commit your changes:
 
-6. Open a pull request.
+   ```bash
+   git commit -m "Add amazing new feature"
+
+8. Push to the branch:
+
+   ```bash
+   git push origin feature/amazing-new-feature
+
+10. Open a pull request
