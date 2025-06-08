@@ -1,127 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Bubble Tea</title>
-  </head>
-  <body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bubble Tea Locations - Sheffield</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-lime-400 dark:bg-gray-900 text-gray-900 dark:text-white font-sans min-h-screen flex flex-col">
 
-    <!--Navbar-->
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
-      <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-      >
-        <a
-          href="index.html"
-          class="flex items-center space-x-3 rtl:space-x-reverse"
+  <!-- Navbar -->
+  <header>
+    <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700" aria-label="Main navigation">
+      <div class="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
+        <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white">Bubble Tea</a>
+
+        <!-- Hamburger Menu -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" aria-hidden="true" />
+        <label for="menu-toggle"
+               class="md:hidden cursor-pointer"
+               role="button"
+               aria-controls="main-menu"
+               aria-expanded="false">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <span class="sr-only">Toggle navigation</span>
+        </label>
+
+        <!-- Navigation Links -->
+        <ul id="main-menu"
+            class="hidden peer-checked:flex flex-col w-full mt-4 md:flex md:flex-row md:space-x-8 md:mt-0 md:w-auto font-medium bg-gray-50 dark:bg-gray-800 md:bg-white md:dark:bg-gray-900 p-4 md:p-0 rounded-lg md:rounded-none"
         >
-          <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >Bubble Tea</span
-          >
-        </a>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-          >
-            <li>
-              <a
-                href="index.html"
-                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Home</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="About.html"
-                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >About</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="Types.html"
-                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Types</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="Locations.html"
-                class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page"
-                >Locations</a
-              >
-            </li>
-          </ul>
-        </div>
+          <li><a href="About.html" class="block py-2 px-3 hover:text-blue-400">About</a></li>
+          <li><a href="Types.html" class="block py-2 px-3 hover:text-pink-400">Types</a></li>
+          <li><a href="Locations.html" aria-current="page" class="block py-2 px-3 text-white bg-lime-400 rounded-md md:bg-transparent md:text-gray-800 md:p-0 dark:text-white md:dark:text-lime-400">Locations</a></li>
+        </ul>
       </div>
     </nav>
+  </header>
 
-    <!--Page Content-->
-  <section class="grid grid-cols-4 gap-4 bg-lime-400 p-4 rounded-xl">
-    <div class="col-span-4 bg-white rounded-xl p-8 text-lg font-semibold text-center shadow-sm shadow-gray-500">Now it's time to try some for yourself! There are many establishments throughout Sheffield that serve excellent bubble tea</div>
+  <!-- Main Content -->
+  <main class="flex-1 max-w-screen-xl mx-auto my-6 px-4 w-full">
+    <section class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 bg-lime-400 p-6 rounded-xl">
+      
+      <!-- Title -->
+      <section class="col-span-full bg-white rounded-xl p-8 text-lg font-semibold text-center shadow-sm shadow-gray-500" aria-label="Bubble tea locations heading">
+        Now it's time to try some for yourself! There are many establishments throughout Sheffield that serve excellent bubble tea:
+      </section>
+      
+      <!-- Cuppacha -->
+      <article class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden" role="region" aria-labelledby="shop-cuppacha">
+        <img src="/images/cuppacha.jpeg" alt="Cuppacha bubble tea shopfront in Orchard Square, Sheffield" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 id="shop-cuppacha" class="font-bold text-xl mb-2">Cuppacha</h2>
+          <p class="mb-2">14 Orchard Square, Sheffield City Centre, Sheffield S1 2FB</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://www.cuppacha.com/" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300">Website</a>
+            <a href="https://maps.app.goo.gl/HXxxeNXVXbmTZgUe6" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300">Map</a>
+          </div>
+        </div>
+      </article>
 
-    <section class="max-w-sm rounded-xl overflow-hidden bg-white shadow-lg">
-      <img class="w-full" src="https://i0.wp.com/orchardsquare.co.uk/wp-content/uploads/2015/02/cuppacha1.jpg" alt="Cuppacha Sheffield Shopfront">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Cuppacha</div>
-        <p class="text-gray-700 text-base">14 Orchard Square, Sheffield City Centre, Sheffield S1 2FB
-        </p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://www.cuppacha.com/">Website</a></span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://maps.app.goo.gl/HXxxeNXVXbmTZgUe6">Map</a></span>
-      </div>
+      <!-- Little Boba Cafe -->
+      <article class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden" role="region" aria-labelledby="shop-littleboba">
+        <img src="/images/littlebobacafe.jpg" alt="Little Boba Cafe storefront on Devonshire Street in Sheffield" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 id="shop-littleboba" class="font-bold text-xl mb-2">Little Boba Cafe</h2>
+          <p class="mb-2">142 Devonshire St, Sheffield City Centre, Sheffield S3 7SF</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://www.facebook.com/people/littlebobacafe_sheffield/100083349100719/" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300">Website</a>
+            <a href="https://g.co/kgs/LSwR2bw" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300">Map</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Yum Yum Bites -->
+      <article class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden" role="region" aria-labelledby="shop-yumyum">
+        <img src="/images/yumyumbites.jpeg" alt="Yum Yum Bites storefront in New Era Square, Sheffield" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 id="shop-yumyum" class="font-bold text-xl mb-2">Yum Yum Bites</h2>
+          <p class="mb-2">8 New Era Square, Highfield, Sheffield S2 4BF</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://yumyumbites.co.uk/" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300">Website</a>
+            <a href="https://g.co/kgs/8s7R1wL" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300">Map</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- K-Tea -->
+      <article class="bg-white dark:bg-gray-800 shadow rounded-xl overflow-hidden" role="region" aria-labelledby="shop-ktea">
+        <img src="/images/ktea.jpeg" alt="K-Tea bubble tea shopfront on Ecclesall Road in Sheffield" class="w-full h-48 object-cover" />
+        <div class="p-4">
+          <h2 id="shop-ktea" class="font-bold text-xl mb-2">K-Tea</h2>
+          <p class="mb-2">653 Ecclesall Rd, Sharrow, Sheffield S11 8PT</p>
+          <div class="flex flex-wrap gap-2">
+            <a href="https://k-tea.uk/" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300">Website</a>
+            <a href="https://g.co/kgs/JV6LV63" class="bg-gray-200 text-gray-800 px-3 py-1 rounded-full text-sm hover:bg-gray-300">Map</a>
+          </div>
+        </div>
+      </article>
     </section>
+  </main>
 
-    <section class="max-w-sm rounded-xl overflow-hidden bg-white shadow-lg">
-      <img class="w-full" src="https://www.thestar.co.uk/webimg/b25lY21zOjZiZDk5OGQ4LWM4MTctNDkxNC1hZWY5LWQ0NTk3YTNmYzc4MDplMzY2YmQ2Zi1mNzQ5LTQxMmMtOGY3Ny0zOTBlYWU4YTFjYmE=.jpg" alt="Little Boba Cafe Sheffield Shopfront">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Little Boba Cafe</div>
-        <p class="text-gray-700 text-base">142 Devonshire St, Sheffield City Centre, Sheffield S3 7SF
-        </p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://www.facebook.com/people/littlebobacafe_sheffield/100083349100719/">Website</a></span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://g.co/kgs/LSwR2bw">Map</a></span>
-      </div>
-    </section>
-
-    <section class="max-w-sm rounded-xl overflow-hidden bg-white shadow-lg">
-      <img class="w-full" src="https://www.thestar.co.uk/jpim-static/image/2024/09/05/17/19/20240905_175926.jpeg" alt="Yum Yum Bites Sheffield Shopfront">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">Yum Yum Bites</div>
-        <p class="text-gray-700 text-base">8 New Era Square, Highfield, Sheffield S2 4BF
-        </p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://yumyumbites.co.uk/">Website</a></span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://g.co/kgs/8s7R1wL">Map</a></span>
-      </div>
-    </section>
-
-    <section class="max-w-sm rounded-xl overflow-hidden bg-white shadow-lg">
-      <img class="w-full" src="https://scontent-lhr8-1.xx.fbcdn.net/v/t39.30808-6/469449133_564879046284909_8944646235776242784_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=iB5BQNCJQ88Q7kNvwEZJa0k&_nc_oc=AdndjmwSqLCcByODGwASt2pbPN_ZRVpFvPOo6ivvU6fR3I2IoEHdB8Kdw9SR7S4YwSgJc6N9sKPFBq_vUUeSkO_Y&_nc_zt=23&_nc_ht=scontent-lhr8-1.xx&_nc_gid=rzDnOmbw75WFBHlTwouNxw&oh=00_AfHiB4_2WS9lGT5eAkVLoKvDMakUb_9_Jr54t5MCq06-pw&oe=67FECD6F" alt="K-Tea Sheffield Shopfront">
-      <div class="px-6 py-4">
-        <div class="font-bold text-xl mb-2">K-Tea</div>
-        <p class="text-gray-700 text-base">653 Ecclesall Rd, Sharrow, Sheffield S11 8PT
-        </p>
-      </div>
-      <div class="px-6 pt-4 pb-2">
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://k-tea.uk/">Website</a></span>
-        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"><a href="https://g.co/kgs/JV6LV63">Map</a></span>
-      </div>
-    </section>
-
-    <!--Footer-->
-<footer class="col-span-4 gap-2 bg-lime-400 p-4 rounded-xl">
-  <div class="col-span-4 bg-white rounded-xl p-2 text-sm font-semibold text-center shadow-sm shadow-gray-500">Made by Emily. All rights reserved.</div></footer>
+  <!-- Footer -->
+  <footer class="bg-lime-400 p-4">
+    <div class="bg-white rounded-xl p-3 text-center text-sm font-semibold shadow-sm shadow-gray-500">
+      Made by Emily. All rights reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
