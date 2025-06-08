@@ -3,76 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Bubble Tea</title>
   </head>
-  <body>
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white font-sans">
 
-    <!--Navbar-->
-    <nav class="bg-white border-gray-200 dark:bg-gray-900">
-      <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
-      >
-        <a
-          href="index.html"
-          class="flex items-center space-x-3 rtl:space-x-reverse"
+    <!-- Navbar -->
+    <header>
+      <nav class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700" aria-label="Main navigation">
+      <div class="max-w-screen-xl mx-auto p-4 flex items-center justify-between">
+        <a href="index.html" class="text-2xl font-bold text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500">Bubble Tea</a>
+
+          <!-- Hamburger Menu -->
+          <input type="checkbox" id="menu-toggle" class="hidden peer" aria-hidden="true" />
+        <label for="menu-toggle" class="md:hidden cursor-pointer" role="button" aria-controls="main-menu" aria-expanded="false">
+          <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor"
+               viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <span class="sr-only">Toggle navigation</span>
+        </label>
+
+          <!-- Navigation Links -->
+          <ul id="main-menu"
+            class="hidden peer-checked:flex flex-col w-full mt-4 md:flex md:flex-row md:space-x-8 md:mt-0 md:w-auto font-medium bg-gray-50 dark:bg-gray-800 md:bg-white md:dark:bg-gray-900 p-4 md:p-0 rounded-lg md:rounded-none"
         >
-          <span
-            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
-            >Bubble Tea</span
-          >
-        </a>
-        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul
-            class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
-          >
-            <li>
-              <a
-                href="index.html"
-                class="block py-2 px-3 text-white bg-blue-700 rounded-sm md:bg-transparent md:text-blue-700 md:p-0 dark:text-white md:dark:text-blue-500"
-                aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="About.html"
-                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >About</a
-              >
-            </li>
-            <li>
-              <a
-                href="Types.html"
-                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Types</a
-              >
-            </li>
-            <li>
-              <a
-                href="Locations.html"
-                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                >Locations</a
-              >
-            </li>
-          </ul>
-        </div>
+          
+          <li><a href="About.html" class="block py-2 px-3 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">About</a></li>
+          <li><a href="Types.html" class="block py-2 px-3 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Types</a></li>
+          <li><a href="Locations.html" class="block py-2 px-3 hover:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">Locations</a></li>
+        </ul>
       </div>
     </nav>
+  </header>
 
-    <!--Page Title-->
-    <section
-      class="overflow-hidden rounded-lg bg-cover bg-center p-100"
-      style="
-        background-image: url('https://assets3.thrillist.com/v1/image/2811338/1200x600/scale;;webp=auto;jpeg_quality=85.jpg');
-      "
-    >
-      <h2 class="absolute left-4 text-4xl font-semibold">
-        Welcome to the World of Bubble Tea
-      </h2>
-      <h4 class="absolute left-4 mt-10 text-xl font-semibold">
-        It's lovely to have you here. Please take a look around my website.
-      </h4>
-    </section>
+    <!-- Hero Section -->
+    <main>
+      <section
+        class="relative bg-cover bg-center h-[60vh] md:h-[80vh] flex items-center justify-start px-6 md:px-12"
+        style="background-image: url('https://assets3.thrillist.com/v1/image/2811338/1200x600/scale;;webp=auto;jpeg_quality=85.jpg');"
+        role="img" aria-label="A photo of person's hand holding a cup of bubble tea in front of blurred backdrop of a busy Taiwanese street market."
+      >
+        <div class="bg-black/60 p-6 rounded-lg max-w-xl text-white" aria-label="Welcome message">
+          <h1 class="text-3xl md:text-5xl font-bold leading-tight">Welcome to the World of Bubble Tea</h1>
+          <p class="mt-4 text-lg">It's lovely to have you here. Please take a look around my website.</p>
+        </div>
+      </section>
+    </main>
+
   </body>
 </html>
